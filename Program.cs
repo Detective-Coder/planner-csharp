@@ -1,14 +1,32 @@
 using System;
 
-namespace Intro
+namespace Planner
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.Write("What is your name? ");
-            string name = Console.ReadLine();
-            Console.WriteLine($"Hello, {name}! I'm glad to meet you.");
+            Building godzillaHouse = new Building("1 Godzilla Lane")
+            {
+              Name = "Godzilla's House",
+              Stories = 100,
+              Width = 10000,
+              Depth = 10000
+            };
+
+            City Monsterville = new City("Monsterville")
+            {
+              Mayor = "Joe Bob Briggs",
+              YearFounded = 1983
+            };
+
+            godzillaHouse.Purchase("Mechagodzilla");
+
+            Monsterville.AddBuilding(godzillaHouse);
+
+            Monsterville.PrintBuildings();
         }
+
+        
     }
 }
