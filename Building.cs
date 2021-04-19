@@ -2,11 +2,37 @@ using System;
 
 namespace Planner
 {
-    class Program
+    public class Building
     {
-        static void Main(string[] args)
+      private string _designer = "Aaron Frankenfield";
+      private DateTime _dateConstructed {get; set;}
+      private string _address {get; set;}
+      private string _owner {get; set;}
+      public int Stories {get; set;}
+      public double Width {get; set;}
+      public double Depth {get; set;}
+      public double Volume {
+        get
         {
-            Console.WriteLine("Hello World!");
+          return Width * Depth * (3 * Stories);
         }
+      }
+      public Building(string address) {
+        _address = address;
+      }
+
+      public void Construct()
+      {
+        _dateConstructed = DateTime.Now;
+      }
+      public void Purchase(string owner)
+      {
+        _owner = owner;
+      }
     }
 }
+
+
+
+
+

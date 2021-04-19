@@ -1,12 +1,14 @@
-﻿using System;
+using System;
 
-namespace Planner
+namespace Intro
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("What is your name? ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello, {name}! I'm glad to meet you.");
         }
     }
 }
