@@ -14,6 +14,14 @@ namespace Planner
               Depth = 10000
             };
 
+            Building jawsHouse = new Building("1 Amity Island")
+            {
+              Name = "Jaws' House",
+              Stories = -100,
+              Width = 20000,
+              Depth = 50000
+            };
+
             City Monsterville = new City("Monsterville")
             {
               Mayor = "Joe Bob Briggs",
@@ -23,6 +31,8 @@ namespace Planner
             godzillaHouse.Purchase("Mechagodzilla");
 
             Monsterville.AddBuilding(godzillaHouse);
+
+            Monsterville.AddBuilding(jawsHouse);
 
             Monsterville.PrintBuildings();
         }
